@@ -163,12 +163,12 @@
     <div class="post-content ">
         <p>  今天在网上闲逛的时候发现了一个非常喜欢的一个静态的页面，想着自己的nilin.cc的首页也很久没有换过了，想着换一下，前面使用git命令还是很nice的，结果现在的分支改成了<strong>main</strong>这个就感觉有点坑了！结果一直出现错误！</p>
 <p>正好也记录一下这个操作过程。</p>
-<p><strong>git init</strong> &#x2F;&#x2F;把这个目录变成Git可以管理的仓库</p>
-<p>**git add README.md **&#x2F;&#x2F;文件添加到仓库</p>
-<p>**git add . **&#x2F;&#x2F;不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </p>
-<p>**git commit -m “first commit” **&#x2F;&#x2F;把文件提交到仓库</p>
-<p><strong>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;</a>:nilincc&#x2F;nilincc.github.io.git</strong> &#x2F;&#x2F;关联远程仓库</p>
-<p>**git push -u origin master **&#x2F;&#x2F;把本地库的所有内容推送到远程库上</p>
+<p><strong>git init</strong>   &#x2F;&#x2F;把这个目录变成Git可以管理的仓库</p>
+<p><strong>git add README.md</strong>  &#x2F;&#x2F;文件添加到仓库</p>
+<p><strong>git add .</strong>  &#x2F;&#x2F;不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </p>
+<p><strong>git commit -m “first commit”</strong>  &#x2F;&#x2F;把文件提交到仓库</p>
+<p><strong>git remote add origin <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#98;&#46;&#99;&#111;&#x6d;">&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#98;&#46;&#99;&#111;&#x6d;</a>:nilincc&#x2F;nilincc.github.io.git</strong>  &#x2F;&#x2F;关联远程仓库</p>
+<p><strong>git push -u origin master</strong> &#x2F;&#x2F;把本地库的所有内容推送到远程库上</p>
 <p>以上的这些命令应该会玩<strong>git</strong>的大佬应该都不陌生吧，但是今晚上遇到了一个比较辣手的问题，</p>
 <h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>我遇到的问题就是：最后一步部署上，这个给我出的错误是：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">error: src refspec main does not match any</span><br><span class="line">error: failed to push some refs to <span class="string">&#x27;github.com:xxx/xxx.github.io.git&#x27;</span></span><br></pre></td></tr></table></figure>
