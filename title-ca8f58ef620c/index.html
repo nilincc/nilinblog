@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="逆鳞的博客">
+    <meta property="og:type" content="website">
+    <meta name="description" content="逆鳞的博客">
+    <meta name="keyword"  content="hexo,逆鳞博客">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        记录一下在GitHub上传代码与文件的过程 - 逆鳞的日常
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 逆鳞的私密小花园，欢迎您的到来 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.png" />
+        </div>
+        <div class="name">
+            <i>逆鳞</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>收藏</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">遇到的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%9A%84%E5%8A%9E%E6%B3%95"><span class="toc-text">解决的办法</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 逆鳞的私密小花园，欢迎您的到来 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        记录一下在GitHub上传代码与文件的过程
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2023-09-19 22:19:17</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#GitHub" title="GitHub">GitHub</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>  今天在网上闲逛的时候发现了一个非常喜欢的一个静态的页面，想着自己的nilin.cc的首页也很久没有换过了，想着换一下，前面使用git命令还是很nice的，结果现在的分支改成了<strong>main</strong>这个就感觉有点坑了！结果一直出现错误！</p>
+<p>正好也记录一下这个操作过程。</p>
+<p><strong>git init</strong> &#x2F;&#x2F;把这个目录变成Git可以管理的仓库</p>
+<p>**git add README.md **&#x2F;&#x2F;文件添加到仓库</p>
+<p>**git add . **&#x2F;&#x2F;不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </p>
+<p>**git commit -m “first commit” **&#x2F;&#x2F;把文件提交到仓库</p>
+<p><strong>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;</a>:nilincc&#x2F;nilincc.github.io.git</strong> &#x2F;&#x2F;关联远程仓库</p>
+<p>**git push -u origin master **&#x2F;&#x2F;把本地库的所有内容推送到远程库上</p>
+<p>以上的这些命令应该会玩<strong>git</strong>的大佬应该都不陌生吧，但是今晚上遇到了一个比较辣手的问题，</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>我遇到的问题就是：最后一步部署上，这个给我出的错误是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">error: src refspec main does not match any</span><br><span class="line">error: failed to push some refs to <span class="string">&#x27;github.com:xxx/xxx.github.io.git&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>那就是以前的仓库分支是<strong>master</strong>，而最新的仓库分支是：<strong>main</strong>，所以在像以前的那种git的操作，肯定是报错的，我就是一直在报错，而我这小学文化，一看更懵逼了，《老子从来没有遇到过这个问题啊！》所以在网上各种搜索，各种查，总算是搞定了，</p>
+<h2 id="解决的办法"><a href="#解决的办法" class="headerlink" title="解决的办法"></a>解决的办法</h2><p>那就是使用git命令，让分支<strong>master</strong>变成分支<strong>main</strong>，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m master main</span><br></pre></td></tr></table></figure>
+<p>然后在使用git命令 git pull拉一下代码，反正网上他们是这么说的，具体是什么意思，我也不懂，反正照做就是了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
+
+
+<p>再然后使用git命令 推一下这个代码，话说网上的大神说这个是一个强制推的命令，反正我不明白，能成功就行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin main</span><br></pre></td></tr></table></figure>
+
+<p>最后就是可以使用git命令部署了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<p>最后的最后，虽然咱不懂这些，但是看着自己弄得东西已经上传到GitHub的仓库，感觉自己棒棒哒。🤭</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+</html>
