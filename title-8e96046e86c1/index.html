@@ -111,7 +111,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EGitHub%E4%BB%93%E5%BA%93%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA"><span class="toc-text">基于GitHub仓库的图床搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vercel%E9%83%A8%E7%BD%B2"><span class="toc-text">Vercel部署</span></a></li></ol>
 </div>
     
 </div>
@@ -165,6 +165,36 @@
 <p>  前段时间使用了<a target="_blank" rel="noopener" href="https://picx.xpoet.cn/%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%96%B9%E6%A1%88%EF%BC%8C%E4%BD%86%E6%98%AF%E7%8E%B0%E5%9C%A8%E5%9B%BE%E7%89%87%E5%85%A8%E9%83%A8%E6%8C%82%E6%8E%89%E4%BA%86%EF%BC%8C%E4%B8%8D%E7%9F%A5%E9%81%93%E6%98%AF%E6%88%91%E7%9A%84%E5%8E%9F%E5%9B%A0%E8%BF%98%E6%98%AFhttps://picx.xpoet.cn/%E7%9A%84%E5%8E%9F%E5%9B%A0%EF%BC%81">https://picx.xpoet.cn/的图床方案，但是现在图片全部挂掉了，不知道是我的原因还是https://picx.xpoet.cn/的原因！</a></p>
 <p>当然还是主打免费的图床，虽然知道这个<strong>白 女票</strong>方案很难实施，但是要加油啊，万一成了呢，嘿嘿。</p>
 <p>继续寻找中········</p>
+<hr>
+<p>最终我还是找到了一种比较适合我的免费图床方案。我的免费图床方案还是使用现有的东西，那就是GitHub。</p>
+<p>顺便写一下我的图床搭建和使用方法。</p>
+<h2 id="基于GitHub仓库的图床搭建"><a href="#基于GitHub仓库的图床搭建" class="headerlink" title="基于GitHub仓库的图床搭建"></a>基于GitHub仓库的图床搭建</h2><p>首先进入Github官网注册并登录自己的账号，到自己的个人主页，点击右上角的+，并选择New Repository创建自己的仓库。</p>
+<p>仓库名字随意，描述也可以自由发挥，可见性最好选public，Readme文件可以创建，然后点击Create Repository创建仓库。</p>
+<p>《PS：如果你已经搭建好了你的hexo博客，那就可以直接在本地新建一个图床的文件夹了，如果你还没有搭建起来自己的hexo博客，那就请先去百度一下<strong>RSA公钥</strong>这方面的教程哈》</p>
+<p>先在本地创建一个文件夹，文件夹位置和名字随意就可以，进入该文件夹后右键打开Git Bash，然后输入以下代码把之前创建的仓库拷贝下来，其中git clone后面的东西要替换成自己的仓库信息，可以通过自己仓库的ssh链接来获取。</p>
+<p><img src="https://img.nilin.cc/img/img1.png" alt="逆鳞的日常" title="我的图床解决方案"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:nilincc/img.git</span><br></pre></td></tr></table></figure>
+
+<p>看到上图的信息就代表成功把整个仓库拷贝到当前文件夹了，此时我们可以看见自己的文件夹多了个.git文件夹和Readme.md文件，这就代表成功了。</p>
+<blockquote>
+<p>注意：.git是隐藏文件夹</p>
+</blockquote>
+<p>此时我们最好在这个文件夹里面创建创建一个img文件夹专门存放图片，如果有存放其他类型资源的可以创建别的文件夹，比如现在想往仓库里加两张图，直接就把图片复制到img文件夹里面即可。</p>
+<p>然后在带有Readme.md文件的那个文件夹内，右键打开Git Bash（注意看清楚是什么文件夹），然后依次输入以下命令把更改推送到远程仓库，最后一步不成功可能要多试几次。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将更改提交</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;更新图片&quot;</span></span><br><span class="line"><span class="comment"># 推送至github仓库</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>最后看见如下信息就代表推送成功了</p>
+<p><img src="https://img.nilin.cc/img/img2.png" alt="逆鳞的日常" title="我的图床解决方案"></p>
+<h2 id="Vercel部署"><a href="#Vercel部署" class="headerlink" title="Vercel部署"></a>Vercel部署</h2><p>进入Vercel控制面板新建项目，并通过Github继续，选择导入刚刚创建的仓库，然后直接部署即可</p>
+<p><img src="https://img.nilin.cc/img/img3.png" alt="逆鳞的日常" title="我的图床解决方案"></p>
+<p>进入该项目控制台后，选择右上角的View Domains添加新的域名，添加一个自己域名的二级域名，然后在你对应的域名解析控制台添加对应解析，等待生效。</p>
+<p>通过自定义域名+资源路径即可访问到对应的资源，例如我这里为：<a target="_blank" rel="noopener" href="https://img.nilin.cc/img/avatar.png">https://img.nilin.cc/img/avatar.png</a></p>
+<p>要更新图片怎么办？只要将资源复制到对应的文件夹，然后再执行一次下面的命令即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将更改提交</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;更新图片&quot;</span></span><br><span class="line"><span class="comment"># 推送至github仓库</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>这个命令默认是更新到仓库的main分支上，Vercel一旦检测到main分支发送变化就会触发新一轮部署，我们稍候片刻即可通过新的路径访问到新的资源。</p>
+<hr>
+<p>以上就是我目前找到的适合我自己的免费图床解决方案，</p>
 
         
         <br />
