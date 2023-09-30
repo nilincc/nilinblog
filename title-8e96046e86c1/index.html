@@ -111,7 +111,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EGitHub%E4%BB%93%E5%BA%93%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA"><span class="toc-text">基于GitHub仓库的图床搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vercel%E9%83%A8%E7%BD%B2"><span class="toc-text">Vercel部署</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EGitHub%E4%BB%93%E5%BA%93%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA"><span class="toc-text">基于GitHub仓库的图床搭建</span></a></li></ol>
 </div>
     
 </div>
@@ -185,14 +185,6 @@
 
 <p>最后看见如下信息就代表推送成功了</p>
 <p><img src="https://img.nilin.cc/img/img2.png" alt="逆鳞的日常" title="我的图床解决方案"></p>
-<h2 id="Vercel部署"><a href="#Vercel部署" class="headerlink" title="Vercel部署"></a>Vercel部署</h2><p>进入Vercel控制面板新建项目，并通过Github继续，选择导入刚刚创建的仓库，然后直接部署即可</p>
-<p><img src="https://img.nilin.cc/img/img3.png" alt="逆鳞的日常" title="我的图床解决方案"></p>
-<p>进入该项目控制台后，选择右上角的View Domains添加新的域名，添加一个自己域名的二级域名，然后在你对应的域名解析控制台添加对应解析，等待生效。</p>
-<p>通过自定义域名+资源路径即可访问到对应的资源，例如我这里为：<a target="_blank" rel="noopener" href="https://img.nilin.cc/img/avatar.png">https://img.nilin.cc/img/avatar.png</a></p>
-<p>要更新图片怎么办？只要将资源复制到对应的文件夹，然后再执行一次下面的命令即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将更改提交</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;更新图片&quot;</span></span><br><span class="line"><span class="comment"># 推送至github仓库</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<p>这个命令默认是更新到仓库的main分支上，Vercel一旦检测到main分支发送变化就会触发新一轮部署，我们稍候片刻即可通过新的路径访问到新的资源。</p>
 <hr>
 <p>以上就是我目前找到的适合我自己的免费图床解决方案，</p>
 
