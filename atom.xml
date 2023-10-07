@@ -6,7 +6,7 @@
   <link href="https://blog.nilin.cc/atom.xml" rel="self"/>
   
   <link href="https://blog.nilin.cc/"/>
-  <updated>2023-10-01T15:30:48.723Z</updated>
+  <updated>2023-10-07T14:10:18.425Z</updated>
   <id>https://blog.nilin.cc/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>转载-新浪微博做图床的方法</title>
+    <link href="https://blog.nilin.cc/title-48f3aca9e836/"/>
+    <id>https://blog.nilin.cc/title-48f3aca9e836/</id>
+    <published>2023-10-07T13:59:46.000Z</published>
+    <updated>2023-10-07T14:10:18.425Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在这个流量和“墙”双限制的年代，博主们为了一个稳定的图床，也是操碎了心，各种国外的图床因为各位老哥搞黄色已经在墙外很久了…国内的图床又是几天就跑路了，剩下一堆收费图床，也是让我们这些正常搞博客的博主们费心费力…用github或者vercel或者netlify的空间又时不时的</summary>
+        
+      
+    
+    
+    
+    <category term="个人日常" scheme="https://blog.nilin.cc/categories/%E4%B8%AA%E4%BA%BA%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="博客" scheme="https://blog.nilin.cc/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>庆祝中华人民共和国成立74周年</title>
