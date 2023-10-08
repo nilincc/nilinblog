@@ -6,7 +6,7 @@
   <link href="https://blog.nilin.cc/atom.xml" rel="self"/>
   
   <link href="https://blog.nilin.cc/"/>
-  <updated>2023-10-07T14:11:12.514Z</updated>
+  <updated>2023-10-08T11:59:04.708Z</updated>
   <id>https://blog.nilin.cc/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>给我的博客搭建giscus评论的方法与详细步骤</title>
+    <link href="https://blog.nilin.cc/title-d618332adaa9/"/>
+    <id>https://blog.nilin.cc/title-d618332adaa9/</id>
+    <published>2023-10-08T11:16:36.000Z</published>
+    <updated>2023-10-08T11:59:04.708Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;话说在查看别的大佬博文的时候，他们的博文下方都有一个可以评论的框框，并且也可以支持留言与互动，咱瞅瞅咱自己的博客连一个评论框都没有！感觉好像不太满意。&lt;/p&gt;
+&lt;p&gt;别人有的咱也得有，虽然咱这个博客是一个静态博客，不像动态博客那种本身就支持评论与互动的功能，但是咱也想要啊，</summary>
+        
+      
+    
+    
+    
+    <category term="个人日常" scheme="https://blog.nilin.cc/categories/%E4%B8%AA%E4%BA%BA%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="博客" scheme="https://blog.nilin.cc/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>转载-新浪微博做图床的方法</title>

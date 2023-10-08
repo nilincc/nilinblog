@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="逆鳞的博客">
+    <meta property="og:type" content="website">
+    <meta name="description" content="逆鳞的博客">
+    <meta name="keyword"  content="hexo,逆鳞博客">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        给我的博客搭建giscus评论的方法与详细步骤 - 逆鳞的日常
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="逆鳞" type="application/atom+xml">
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 逆鳞的私密小花园，欢迎您的到来 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.png" />
+        </div>
+        <div class="name">
+            <i>逆鳞</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>收藏</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 逆鳞的私密小花园，欢迎您的到来 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        给我的博客搭建giscus评论的方法与详细步骤
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2023-10-08 19:16:36</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#博客" title="博客">博客</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>话说在查看别的大佬博文的时候，他们的博文下方都有一个可以评论的框框，并且也可以支持留言与互动，咱瞅瞅咱自己的博客连一个评论框都没有！感觉好像不太满意。</p>
+<p>别人有的咱也得有，虽然咱这个博客是一个静态博客，不像动态博客那种本身就支持评论与互动的功能，但是咱也想要啊，因为我使用的是hexo的<a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a>主题，这个主题本身就有集成了<strong>giscus</strong>所以设置这个<strong>giscus</strong>本身是蛮简单的。<del>如果你使用的不是这个主题，那就看看你使用的主题支持不支持这个评论系统吧</del></p>
+<p>废话不多说，开整：</p>
+<p>首先打开：<a target="_blank" rel="noopener" href="https://giscus.app/">https://giscus.app/</a></p>
+<p>第一步：检查一下你的GitHub仓库是否是开放的，也就是说你在创建这个仓库的时候是否选择了<strong>public</strong>。如果不是开放的，那是不能够查看 discussion。</p>
+<p>第二步：安装<strong>giscus</strong>，如果没有安装的时候是不能评论和回应的。安装地址：<a target="_blank" rel="noopener" href="https://github.com/apps/giscus">https://github.com/apps/giscus</a></p>
+<p>第三步：Discussions 功能已在你的仓库中启用，Discussions的位置在你仓库的settings→→→Discussions<br>附图：<br><img src="https://img.nilin.cc/img/Settings.png" alt="逆鳞的日常" title="我的评论解决方案"><br><img src="https://img.nilin.cc/img/Settings1.png" alt="逆鳞的日常" title="我的评论解决方案"></p>
+<p>第四步：在那个小小的仓库框里填写你要部署的仓库，格式的要求是你的GitHub用户名+你仓库的名称，如：nilincc&#x2F;nilinblog</p>
+<p>附图：</p>
+<p><img src="https://img.nilin.cc/img/Settings2.png" alt="逆鳞的日常" title="我的评论解决方案"></p>
+<p>第四步：复制代码到你hexo的config.yml文件里。并且保存。</p>
+<p>建议直接参考（但请勿直接复制下面的内容）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">comment:</span><br><span class="line">  <span class="built_in">type</span>: giscus</span><br><span class="line">  script: |</span><br><span class="line">      &lt;script src=<span class="string">&quot;https://giscus.app/client.js&quot;</span></span><br><span class="line">          data-repo=<span class="string">&quot;aircloud/hexo-aircloud-blog&quot;</span></span><br><span class="line">          data-repo-id=<span class="string">&quot;MDEwOlJlcG9zaXRvcnkxMjkwNDgyNjg=&quot;</span></span><br><span class="line">          data-category=<span class="string">&quot;Announcements&quot;</span></span><br><span class="line">          data-category-id=<span class="string">&quot;DIC_kwDOB7EezM4COhKJ&quot;</span></span><br><span class="line">          data-mapping=<span class="string">&quot;title&quot;</span></span><br><span class="line">          data-reactions-enabled=<span class="string">&quot;1&quot;</span></span><br><span class="line">          data-emit-metadata=<span class="string">&quot;0&quot;</span></span><br><span class="line">          data-input-position=<span class="string">&quot;bottom&quot;</span></span><br><span class="line">          data-theme=<span class="string">&quot;light&quot;</span></span><br><span class="line">          data-lang=<span class="string">&quot;zh-CN&quot;</span></span><br><span class="line">          crossorigin=<span class="string">&quot;anonymous&quot;</span></span><br><span class="line">          async&gt;</span><br><span class="line">      &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>第五步：hexo g hexo s 看看效果，如没什么问题就直接hexo d</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://giscus.app/client.js" data-repo="nilincc/nilinblog" data-repo-id="R_kgDOKE1VDQ" data-category="Announcements" data-category-id="DIC_kwDOKE1VDc4CZ9Nl" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async> </script>
+
+
+
+</html>
